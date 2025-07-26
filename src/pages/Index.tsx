@@ -282,7 +282,7 @@ const EnhancedCreatorLanding = () => {
                     <h3 className="text-xl font-bold text-gray-800">
                       Dashboard Preview
                     </h3>
-                    <p className="text-gray-600">See Crelyzor in action</p>
+                    <p className="text-gray-600">Coming Soon...</p>
                   </div>
                 </div>
                 <div className="absolute -top-4 -right-4 w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center shadow-lg animate-bounce">
