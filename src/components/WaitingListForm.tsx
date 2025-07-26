@@ -16,7 +16,7 @@ export const WaitingListForm = () => {
     if (!email) return;
 
     setIsLoading(true);
-    
+
     // Simulate API call
     setTimeout(() => {
       setIsSubmitted(true);
@@ -56,29 +56,29 @@ export const WaitingListForm = () => {
             Be the first to know when Crelyzor launches
           </p>
         </div>
-        
-        <div className="relative">
+
+        <div className="relative w-full">
           <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
           <Input
             type="email"
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="pl-10 h-12"
+            className="pl-10 h-12 w-full"
             required
           />
         </div>
-        
-        <Button 
-          type="submit" 
-          variant="hero" 
-          size="xl" 
+
+        <Button
+          type="submit"
+          variant="hero"
+          size="xl"
           className="w-full"
           disabled={isLoading}
         >
           {isLoading ? "Joining..." : "Join Waitlist"}
         </Button>
-        
+
         <p className="text-xs text-muted-foreground text-center">
           No spam, just updates on your creator journey
         </p>
