@@ -65,7 +65,7 @@ const WaitingListForm = () => {
         <button
           type="submit"
           disabled={isLoading}
-          className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center min-w-[120px]"
+          className="px-6 py-3 bg-gradient-to-r from-black to-gray-600 text-white font-semibold rounded-xl hover:from-gray-700 hover:to-black transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center min-w-[120px]"
         >
           {isLoading ? (
             <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
@@ -89,7 +89,7 @@ const FeatureCard = ({ icon: Icon, title, description, delay = 0 }) => (
   >
     <div className="absolute inset-0 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
     <div className="relative z-10">
-      <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+      <div className="w-14 h-14 bg-gradient-to-br from-black to-gray-500 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
         <Icon className="w-7 h-7 text-white" />
       </div>
       <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-purple-700 transition-colors duration-300">
@@ -180,13 +180,7 @@ const EnhancedCreatorLanding = () => {
     },
     { icon: Youtube, name: "YouTube", color: "from-red-500 to-red-600" },
     { icon: Twitter, name: "X (Twitter)", color: "from-gray-800 to-gray-900" },
-    { icon: Smartphone, name: "TikTok", color: "from-pink-600 to-red-500" },
-  ];
-
-  const stats = [
-    { number: "10K+", label: "Creators on Waitlist" },
-    { number: "5+", label: "Platforms Supported" },
-    { number: "99%", label: "Time Saved" },
+    { icon: Smartphone, name: "More...", color: "from-pink-600 to-red-500" },
   ];
 
   useEffect(() => {
@@ -204,18 +198,12 @@ const EnhancedCreatorLanding = () => {
       <nav className="relative z-50 px-4 py-4">
         <div className="container mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-to-r from-black to-gray-600 rounded-xl flex items-center justify-center">
               <Sparkles className="w-6 h-6 text-white" />
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="text-2xl font-bold bg-gradient-to-r from-black to-gray-600 bg-clip-text text-transparent">
               Crelyzor
             </span>
-          </div>
-          <div className="flex items-center space-x-4">
-            <Bell className="w-5 h-5 text-gray-600 hover:text-purple-600 cursor-pointer transition-colors" />
-            <button className="px-4 py-2 text-purple-600 font-medium hover:bg-purple-50 rounded-lg transition-colors">
-              Sign In
-            </button>
           </div>
         </div>
       </nav>
@@ -229,13 +217,13 @@ const EnhancedCreatorLanding = () => {
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-100 to-pink-100 border border-purple-200 animate-pulse">
                   <Star className="w-4 h-4 text-purple-600 mr-2 animate-spin" />
                   <span className="text-sm font-semibold text-purple-700">
-                    🚀 Launching Soon - Join 10K+ Creators
+                    🚀 Launching Soon
                   </span>
                 </div>
 
                 <h1 className="text-5xl md:text-7xl font-black leading-none">
                   Your Creator
-                  <span className="block text-transparent bg-gradient-to-r from-purple-600 via-pink-600 to-purple-800 bg-clip-text animate-pulse">
+                  <span className="block text-transparent bg-gradient-to-r from-black via-gray-600 to-gray-800 bg-clip-text animate-pulse">
                     Empire Hub
                   </span>
                 </h1>
@@ -287,10 +275,10 @@ const EnhancedCreatorLanding = () => {
 
             <div className="relative">
               <div className="relative group">
-                <div className="w-full h-96 bg-gradient-to-br from-purple-600 via-pink-600 to-purple-800 rounded-3xl shadow-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
+                <div className="w-full h-96 bg-gradient-to-br from-black via-gray-600 to-gray-800 rounded-3xl shadow-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
                 <div className="absolute inset-4 bg-white rounded-2xl shadow-xl flex items-center justify-center transform -rotate-3 group-hover:-rotate-6 transition-transform duration-500">
                   <div className="text-center space-y-4">
-                    <Play className="w-16 h-16 text-purple-600 mx-auto" />
+                    <Play className="w-16 h-16 text-gray-600 mx-auto" />
                     <h3 className="text-xl font-bold text-gray-800">
                       Dashboard Preview
                     </h3>
@@ -306,29 +294,13 @@ const EnhancedCreatorLanding = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-white/50 backdrop-blur-sm">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            {stats.map((stat, index) => (
-              <div key={index} className="space-y-2">
-                <div className="text-4xl md:text-5xl font-black text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text">
-                  {stat.number}
-                </div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Features Section */}
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-gray-800">
               Everything Creators Need
-              <span className="block text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text">
+              <span className="block text-transparent bg-gradient-to-r from-black to-gray-300 bg-clip-text">
                 In One Place
               </span>
             </h2>
@@ -354,7 +326,7 @@ const EnhancedCreatorLanding = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 lg:py-24 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-800 relative overflow-hidden">
+      <section className="py-16 lg:py-24 bg-gradient-to-r from-black via-gray-600 to-black relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center space-y-8 max-w-4xl mx-auto">
@@ -376,40 +348,17 @@ const EnhancedCreatorLanding = () => {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="py-12 bg-gray-900 text-white">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center">
-                <Sparkles className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold">Crelyzor</h3>
-                <p className="text-gray-400 text-sm">
-                  Empowering creators worldwide
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center space-x-6 text-gray-400">
-              <Mail className="w-5 h-5 hover:text-white cursor-pointer transition-colors" />
-              <Twitter className="w-5 h-5 hover:text-white cursor-pointer transition-colors" />
-              <Instagram className="w-5 h-5 hover:text-white cursor-pointer transition-colors" />
-              <Globe className="w-5 h-5 hover:text-white cursor-pointer transition-colors" />
-            </div>
-          </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+        <div className="container mx-auto">
+          <div className="border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
             <p>
               &copy; 2025 Crelyzor. All rights reserved. Built for creators, by
               creators.
             </p>
           </div>
         </div>
-      </footer>
+      </section>
 
-      <style jsx>{`
+      <style>{`
         @keyframes fade-in {
           from {
             opacity: 0;
